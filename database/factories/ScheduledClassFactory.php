@@ -18,8 +18,8 @@ class ScheduledClassFactory extends Factory
     public function definition(): array
     {
         return [
-            'instructor_id' => rand(14, 23),
-            'class_type_id' => rand(1, 4),
+            'instructor_id' => fake()->numberBetween(14, 23),
+            'class_type_id' => fake()->randomElement([1, 2, 3, 4]),
             'date_time' => Carbon::now()->addHours(rand(24, 124))->minutes(0)->seconds(0),
         ];
     }
