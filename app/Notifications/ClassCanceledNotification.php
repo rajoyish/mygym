@@ -34,10 +34,10 @@ class ClassCanceledNotification extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('Sorry your class was cancelled')
+            ->subject('Sorry, your class was canceled')
             ->greeting('Hey '.$notifiable->name)
             ->line('Sorry to inform you that your '.$this->details['className'].' class was canceled by the instructor. View the schedule and book another class')
-            ->action('Book a Class', url('/member/book'))
+            ->action('Book a class', url('/member/book'))
             ->line('Thank you for using our application!');
     }
 
